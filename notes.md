@@ -220,8 +220,8 @@
     - a struct is a complex data structure which is comprised of basic data types. it is like objects in javascript
     - ```go
       type person struct {
-        firstName: string
-        lastName: string
+        firstName string
+        lastName string
       }
 
       func main() {
@@ -240,7 +240,7 @@
     - ## We can also use other structs as type in our current struct
 
       ```go
-      type contactInfo {
+      type contactInfo struct {
         email string
         zipCode int
       }
