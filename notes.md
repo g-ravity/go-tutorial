@@ -2,6 +2,10 @@
 
   - We have a couple of go commands available:
     - go build: builds the code and creates an executable file
+      - command to build executable file for both windows and macos
+			- ```apl
+			  GOOS=windows GOARCH=amd64 go build -o myprogram.exe main.go
+			  ```
     - go run: builds and instantly executes the code as well
     - go fmt: formats the code
     - go install & go get: used to manage dependencies and install external packages
