@@ -289,7 +289,7 @@
       // *pointerToPerson actually converts the pointer memory address to value which can be updated then
       ```
 
-    - ## Go allows for a shortcut, instead of passing the pointer address everytime, we can simply pass the variable of the same root type, and if the receiver function expects a pointer of that same root type, then Go will convert the variable to a pointer itself and deference the pointer in the receiver function implicitly itself
+    - ## Go allows for a shortcut, instead of passing the pointer address everytime, we can simply pass the variable of the same root type, and if the receiver function expects a pointer of that same root type, then Go will convert the variable to a pointer itself and dereference the pointer in the receiver function implicitly itself
 
       ```go
       jim.updateName("Jimmy")
