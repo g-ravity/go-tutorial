@@ -59,6 +59,12 @@ map[string]interface{}
 
 This is a very interesting type because it is a map of string to interface. This means that the value can be any type. This is useful because we can use it to store any type of data in a map.
 
+In Go 1.18, interface{} type was replaced by any. It's the same as interface{} but it's more readable. In Go 1.18+, any is preferred as the modern syntax
+
+```go
+map[string]any
+```
+
 Generally, with maps, we can only store values of the same type. But with this type, we can store values of different types.
 
 This is useful if we need to store, process and return json values in Go.

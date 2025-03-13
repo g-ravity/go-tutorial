@@ -41,7 +41,7 @@ func formHandler(w http.ResponseWriter, r *http.Request) {
 	lastName := r.FormValue("lastName")
 	mobile := r.FormValue("mobile")
 
-	userData := map[string]interface{}{
+	userData := map[string]any{
 		"name":   firstName + " " + lastName,
 		"mobile": mobile,
 	}
