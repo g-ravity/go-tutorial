@@ -88,3 +88,35 @@ host := os.Getenv("DB_HOST")
 ```
 
 In Go, init() is a special function, which is automatically called by the Go runtime. It is used to initialize the package (for example, load env variables, do other initializations etc). It is called before the main function is called.
+
+You can connect to any managed DB solution like Firebase or Supabase for database access. I spinned a local Postgres instance using Docker.
+
+```bash
+docker pull postgres
+docker run --name <service-name> -e POSTGRES_PASSWORD=<password> -p 5432:5432 -d <userName>
+```
+
+Now, to connect to the Postgres instance, you can use GORM
+
+```bash
+go get gorm.io/gorm
+got get gorm.io/driver/<driver> # postgres / mysql / sqlite accordingly
+```
+
+Copy and paste the following syntax to get your DB connection
+
+```go
+DB, err = gorm.Open(postgres.Open(<connectionString>), &gorm.Config{}) // get this from gorm docs, and replace your creds
+```
+
+Sprintf is used in Go for string formatting
+
+```go
+str := fmt.Sprintf("Sample test string: %s", "test")
+```
+
+%s : string
+%d : integer
+%f : floats
+%t : boolean
+%v : any value (go compiler will determine format)
