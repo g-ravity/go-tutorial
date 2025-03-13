@@ -86,3 +86,5 @@ if err := godotenv.Load(); err != nil {
 
 host := os.Getenv("DB_HOST")
 ```
+
+In Go, init() is a special function, which is automatically called by the Go runtime. It is used to initialize the package (for example, load env variables, do other initializations etc). It is called before the main function is called.

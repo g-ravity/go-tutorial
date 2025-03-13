@@ -1,16 +1,13 @@
 package main
 
 import (
-	"log"
+	"movie_crud/initializers"
 
 	"github.com/gin-gonic/gin"
-	"github.com/joho/godotenv"
 )
 
 func init() {
-	if err := godotenv.Load(); err != nil {
-		log.Fatal("Error loading .env file")
-	}
+	initializers.LoadEnvVariables()
 }
 
 func main() {
