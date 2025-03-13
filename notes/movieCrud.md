@@ -63,3 +63,26 @@ bin specifies the binary file name after compilation.
 If you use a different folder name other than default tmp (for example, bin), then update it in the .air.toml files
 
 cmd specifies the command to build your go project. If your go files are not in root folder (most commonly, main.go would be stored in something like cmd/api/main.go), then you can specify the path to it here. Otherwise, you can leave it as it is.
+
+With gin, you can simply setup server like this:
+
+```go
+r := gin.Default()
+
+r.run()
+```
+
+It takes the PORT value from environment variable.
+Use godotenv package to set and use environment variables. If no PORT env value is found, then gin uses 8080 by default
+
+Example usage of godotenv
+
+```go
+go get github.com/joho/godotenv
+
+if err := godotenv.Load(); err != nil {
+	log.Fatal("Error loading .env file")
+}
+
+host := os.Getenv("DB_HOST")
+```
